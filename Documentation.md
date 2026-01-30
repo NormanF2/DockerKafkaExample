@@ -28,15 +28,6 @@ Docker and Docker Compose installed.
 
 Python 3.8+ installed.
 
-### Start Kafka
-
-Use Docker Compose to start Zookeeper and Kafka:
-
-    docker-compose up -d
-
-
-Verify that the containers are active with docker ps. You should see kafka and zookeeper in the "Up" state.
-
 ### Install Python Dependencies
 
 It is recommended to create a virtual environment:
@@ -52,6 +43,29 @@ It is recommended to create a virtual environment:
 #### Install library
     python -m pip install -r requirements.txt
 
+## Star the Example
+
+### Start Kafka
+
+Start Zookeeper, Kafka, and the management UI with a single command:
+
+    docker-compose up -d
+
+Verify: With docker ps you should see the kafka, zookeeper, and kafka-ui containers in "Up" state
+
+### Kafka UI
+
+Once the containers are started, open your browser at the address to access Kafka-UI:
+
+    http://localhost:8080
+
+Here you will find Kafka UI, a powerful dashboard where you can:
+
+- See created Topics and create new ones.
+
+- Explore Messages within topics in real-time.
+
+- Check the state of Consumer Groups.
 
 ### Run the Scripts
 
